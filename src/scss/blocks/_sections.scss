@@ -1,28 +1,122 @@
 //---------------------------------------------sections
 .section {
-	position: relative;
+  position: relative;
 
-	width: 100%;
+  width: 100%;
 
-	font-size: 1rem;
+  font-size: 3rem;
 
-	//remove this demo style
-	&.demo_mod {
-		@extend %global_flex_block_row_nowrap_center_center;
+  //remove this demo style
+  //&.demo_mod {
+  //	@extend %global_flex_block_row_nowrap_center_center;
 
-		height: calc(100vh - (var(--height-footer) + var(--height-header)));
+  //	height: calc(100vh - (var(--height-footer) + var(--height-header)));
 
-		font-size: 4rem;
-		color: $white;
-		text-align: center;
+  //	font-size: 4rem;
+  //	color: $white;
+  //	text-align: center;
 
-		background-color: $black;
+  //	background-color: $black;
 
-	}
+  //}
 }
 
-.section_in {
-	max-width: $page_width;
-	width: 100%;
-	margin: 0 auto;
+.section_wrap {
+  max-width: $page_width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav {
+  &_body {
+    @extend %global_flex_block_row_nowrap_space_between_center;
+    background: #f7f7f7;
+    border-radius: 0.4rem;
+    padding: 2.3rem 3.2rem 2.3rem 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+  }
+  &_menu__item {
+    margin: 0px 0px 0px 3.5rem;
+    &:first-child {
+      margin: 0px 0px 0px 5rem;
+    }
+  }
+  &_menu__link {
+    color: $color_link_second;
+  }
+  &_contact__item {
+    margin: 0px 0px 0px 3.5rem;
+    &:first-child {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+  &_menu-list,
+  &_contact-list {
+    @extend %global_flex_block_row_nowrap_space_between_center;
+  }
+}
+.section {
+  &__body {
+    display: flex;
+  }
+}
+.article {
+  flex: 0 1 66.667%;
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 4.4rem;
+    color: $color_text_second;
+    margin: 0px 0px 4rem 0px;
+  }
+  &__post {
+    display: flex;
+    margin: 0 -2rem;
+    &:not(:last-child) {
+      margin-bottom: 7rem;
+    }
+  }
+  &__post-img,
+  &__post-content {
+    padding: 0 2rem;
+  }
+  &__post-desc {
+    color: $color_text_base;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin: 0 0 0.9rem 0;
+  }
+  &__post-info {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin: 0 0 1.1rem 0;
+  }
+  &__post-date {
+    color: $color_text_three;
+    padding: 0 0 0 1.3rem;
+    &::before {
+      content: "|";
+      margin-right: 0.9rem;
+    }
+  }
+  &__post-tag {
+    font-size: 1.2rem;
+    color: $color_link_second;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    margin: 0 0 1.5rem 0;
+  }
+  &__post-comment {
+    font-size: 1.4rem;
+    color: $color_text_three;
+    padding-left: 3rem;
+    background: url("../static/icon/icon.png") no-repeat;
+    background-position: -77px center;
+    background-size: auto 25px;
+  }
 }

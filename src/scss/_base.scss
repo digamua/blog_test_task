@@ -1,15 +1,15 @@
 //------------------------------------------------------------base styles
 :root {
   --full-screen: calc(var(--vh, 1vh) * 100);
-
-  --height-header: 10rem;
+  --height-header: 5.4rem;
   --height-footer: 10rem;
   --gl-indent: 3rem;
 }
 
 html {
   height: 100%;
-  font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
+  //font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
+  font-size: 10px;
 }
 
 body {
@@ -19,6 +19,8 @@ body {
   height: 100%;
 
   font-size: $font_size_base;
+  font-family: $font_1;
+  font-weight: 400;
   color: $color_text_base;
 
   -webkit-text-size-adjust: none;

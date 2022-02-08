@@ -3,5 +3,99 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index'}
 block content_block
-	section.section.demo_mod
-		h1.section_title Hola #[a.test(href='https://glivera-team.com/') Maketodor] ;)
+	section.section
+		.section_wrap
+			.section_header
+				.section_nav.nav 
+					.nav_body
+						+tagHeader({
+						gl_class: 'nav_menu',
+						ul_title: 'tag: ',
+						items: [
+							{title: 'bitcoin', url: '#', active: false},
+							{title: 'bittorrent', url: '#', active: false},
+							{title: 'irc', url: '#', active: false},
+							{title: 'news', url: '#', active: false},
+							{title: 'privacy', url: '#', active: false},
+							{title: 'programming', url: '#', active: false},
+							{title: 'security', url: '#', active: false}
+						]
+						})
+						+tagHeader({
+						gl_class: 'nav_contact',
+						items:[
+							{title: 'team', url: '#', active: false},
+							{title: 'contact', url: '#', active: false}
+						]
+						})
+			.section__body
+				.section__article.article
+					h1.article__title Recent posts
+					.article__body
+							+itemPost({
+								items: [
+									{
+									description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+									url: '1',
+									image: '/img/Bitmap-1.jpg',
+									image_alt: 'Alt Description',
+									author: 'Derek Zimmer',
+									date: 'JUL 25, 2018',
+									tag: 'Governments, Networking, Open Source, Privacy, Security',
+									value: '0'
+									},
+									{
+									description: 'How to get cheaper flights using a VPN',
+									url: '1',
+									image: '/img/Bitmap-2.jpg',
+									image_alt: 'Alt Description',
+									author: 'Jayson',
+									date: 'JUL 24, 2018',
+									tag: 'Guides',
+									value: '2'
+									},
+									{
+									description: 'Net Neutrality was repealed, but the fight is far from over',
+									url: '1',
+									image: '/img/Bitmap-3.jpg',
+									image_alt: 'Alt Description',
+									author: 'Chris Miller',
+									date: 'JUL 22, 2018',
+									tag: 'Governments, Net Neutrality, News',
+									value: '26'
+									},
+									{
+									description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+									url: '1',
+									image: '/img/Bitmap-1.jpg',
+									image_alt: 'Alt Description',
+									author: 'Derek Zimmer',
+									date: 'JUL 25, 2018',
+									tag: 'Governments, Networking, Open Source, Privacy, Security',
+									value: '0'
+									},
+									{
+									description: 'How to get cheaper flights using a VPN',
+									url: '1',
+									image: '/img/Bitmap-2.jpg',
+									image_alt: 'Alt Description',
+									author: 'Jayson',
+									date: 'JUL 24, 2018',
+									tag: 'Guides',
+									value: '2'
+									},
+									{
+									description: 'Net Neutrality was repealed, but the fight is far from over',
+									url: '1',
+									image: '/img/Bitmap-3.jpg',
+									image_alt: 'Alt Description',
+									author: 'Chris Miller',
+									date: 'JUL 22, 2018',
+									tag: 'Governments, Net Neutrality, News',
+									value: '26'
+									}
+								]
+								})
+
+			aside.section__aside
+			
