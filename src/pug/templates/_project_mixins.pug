@@ -1,14 +1,13 @@
 include mixins/_m_header
 include mixins/_m_footer
 
-mixin tagHeader(arr)
+mixin listLink(arr)
 	- gl_mod = arr.gl_mod || ''
-	ul(class=`${arr.gl_class}-list`) !{arr.ul_title}
+	ul(class=`${arr.gl_class}__list`) !{arr.ul_title}
 		each item in arr.items
 			- url = item.url || '#'
-			li(class= `${arr.gl_class}__item ${item.active ? `${arr.gl_class}__item--active_mod` : ''} ${gl_mod ? `${arr.gl_class}__item--${gl_mod}` : ''}`)
+			li(class= `${arr.gl_class}__item ${item.active ? `${arr.gl_class}__item--active` : ''} ${gl_mod ? `${arr.gl_class}__item--${gl_mod}` : ''}`)
 				a(href= url class= `${arr.gl_class}__link ${gl_mod ? `${arr.gl_class}__link--${gl_mod}` : ''}`)= item.title
-
 
 mixin itemPost(arr)
 		ul(class=`article__items`)
@@ -16,7 +15,6 @@ mixin itemPost(arr)
 				- url = item.url || '#'
 					li.article__post
 						.article__post-img
-							//-a(href= url class= `${arr.gl_class}`)
 							a(href= url class= ``)
 								img(src=item.image, alt=item.image_alt)
 						.article__post-content

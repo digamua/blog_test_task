@@ -7,9 +7,9 @@ block content_block
 		.section__wrap
 			.section__header
 				.section__nav.nav 
-					.nav_body
-						+tagHeader({
-						gl_class: 'nav_menu',
+					.nav__body
+						+listLink({
+						gl_class: 'nav-menu',
 						ul_title: 'tag: ',
 						items: [
 							{title: 'bitcoin', url: '#', active: false},
@@ -21,8 +21,8 @@ block content_block
 							{title: 'security', url: '#', active: false}
 						]
 						})
-						+tagHeader({
-						gl_class: 'nav_contact',
+						+listLink({
+						gl_class: 'nav-contact',
 						items:[
 							{title: 'team', url: '#', active: false},
 							{title: 'contact', url: '#', active: false}
@@ -96,48 +96,72 @@ block content_block
 									}
 								]
 								})
+					a.article_btn(href="#") older posts
 
 				aside.section__aside.aside
-					.aside__search Search blog
-					
+					.aside__search
+						+form_input({
+							type: 'text',
+							placeholder: 'Search blog',
+							mod:'search',
+							class:'form_input-search',
+							name:'search'
+						})
+
 					.aside__announce
 						h3.aside__title #[span.aside__icon.aside__icon-annonce] Announcements
-						ul.aside__list
-							li.aside__link Upcoming Changes (Live Chat, Less Censorship, More Access)
-							li.aside__link New Servers (US Washington DC)
-							li.aside__link New Servers (US Denver)
-							li.aside__link Open Source: Releasing the PIA iOS Client
-							li.aside__link Opera Extension is now available
-					
+						+listLink({
+						gl_class: 'aside',
+						items: [
+							{title: 'Upcoming Changes (Live Chat, Less Censorship, More Access)', url: '#', active: false},
+							{title: 'New Servers (US Washington DC)', url: '#', active: false},
+							{title: 'New Servers (US Denver)', url: '#', active: false},
+							{title: 'Open Source: Releasing the PIA iOS Client', url: '#', active: false},
+							{title: 'Opera Extension is now available', url: '#', active: true}
+						]
+						})
 					.aside__popular 
 						h3.aside__title #[span.aside__icon.aside__icon-popular]Popular posts
-						ul.aside__list
-							li.aside__link The Gift of Privacy
-							li.aside__link UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture
-							li.aside__link About the PIA Client Security and VPN Security in General
-							li.aside__link A Private Net Is Just As Fundamental A Right As Freedom Of Speech
-							li.aside__link Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie
+						+listLink({
+						gl_class: 'aside',
+						items: [
+							{title: 'The Gift of Privacy', url: '#', active: false},
+							{title: 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture', url: '#', active: false},
+							{title: 'About the PIA Client Security and VPN Security in General', url: '#', active: false},
+							{title: 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech', url: '#', active: false},
+							{title: 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lieet', url: '#', active: true}
+						]
+						})
 					.aside__banner
-						img(src="img/banner.jpg", alt="Banner")
+						a.aside__banner-link(href="#")
+							img(src="img/banner.jpg", alt="Banner")
 					.aside__tag 
-						h3 Tag cloud
-							ul
-								li ipsum 
-								li dolor 
-								li sit 
-								li amet 
-								li consectetur 
-								li adipisicing 
-								li elit 
-								li Quam  
-								li repellendus 
-								li tempora 
-								li veritatis 
-								li fugit 
-								li minus 
-								li cupiditate 
-								li nemo 
-								li dolor 
-								li a 
-								li distinctio 
-								li itaque
+						h3.aside__title Tag cloud
+						+listLink({
+						gl_class: 'aside-tag',
+						items: [
+							{title: 'Lorem', url: '#', active: false},
+							{title: 'ipsum', url: '#', active: false},
+							{title: 'dolor', url: '#', active: false},
+							{title: 'sit', url: '#', active: false},
+							{title: 'amet', url: '#', active: true},
+							{title: 'consectetur', url: '#', active: false},
+							{title: 'adipisicing', url: '#', active: false},
+							{title: 'elit', url: '#', active: false},
+							{title: 'Tempore', url: '#', active: false},
+							{title: 'officiis', url: '#', active: false},
+							{title: 'ipsam', url: '#', active: false},
+							{title: 'labore', url: '#', active: true},
+							{title: 'totam', url: '#', active: false},
+							{title: 'totam', url: '#', active: false},
+							{title: 'possimus', url: '#', active: false},
+							{title: 'necessitatibus', url: '#', active: true},
+							{title: 'Minima', url: '#', active: false},
+							{title: 'maiores', url: '#', active: false},
+							{title: 'elit', url: '#', active: false},
+							{title: 'architecto', url: '#', active: false},
+							{title: 'nam', url: '#', active: false},
+							{title: 'ipsam', url: '#', active: false},
+							{title: 'quaerat', url: '#', active: true},
+						]
+						})
