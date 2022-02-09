@@ -4,9 +4,9 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index'}
 block content_block
 	section.section
-		.section_wrap
-			.section_header
-				.section_nav.nav 
+		.section__wrap
+			.section__header
+				.section__nav.nav 
 					.nav_body
 						+tagHeader({
 						gl_class: 'nav_menu',
@@ -97,5 +97,47 @@ block content_block
 								]
 								})
 
-			aside.section__aside
-			
+				aside.section__aside.aside
+					.aside__search Search blog
+					
+					.aside__announce
+						h3.aside__title #[span.aside__icon.aside__icon-annonce] Announcements
+						ul.aside__list
+							li.aside__link Upcoming Changes (Live Chat, Less Censorship, More Access)
+							li.aside__link New Servers (US Washington DC)
+							li.aside__link New Servers (US Denver)
+							li.aside__link Open Source: Releasing the PIA iOS Client
+							li.aside__link Opera Extension is now available
+					
+					.aside__popular 
+						h3.aside__title #[span.aside__icon.aside__icon-popular]Popular posts
+						ul.aside__list
+							li.aside__link The Gift of Privacy
+							li.aside__link UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture
+							li.aside__link About the PIA Client Security and VPN Security in General
+							li.aside__link A Private Net Is Just As Fundamental A Right As Freedom Of Speech
+							li.aside__link Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie
+					.aside__banner
+						img(src="img/banner.jpg", alt="Banner")
+					.aside__tag 
+						h3 Tag cloud
+							ul
+								li ipsum 
+								li dolor 
+								li sit 
+								li amet 
+								li consectetur 
+								li adipisicing 
+								li elit 
+								li Quam  
+								li repellendus 
+								li tempora 
+								li veritatis 
+								li fugit 
+								li minus 
+								li cupiditate 
+								li nemo 
+								li dolor 
+								li a 
+								li distinctio 
+								li itaque

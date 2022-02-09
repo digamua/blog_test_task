@@ -21,7 +21,7 @@
   //}
 }
 
-.section_wrap {
+.section__wrap {
   max-width: $page_width;
   width: 100%;
   margin: 0 auto;
@@ -60,6 +60,9 @@
   }
 }
 .section {
+  &__header {
+    margin: 0px 0px 1.4em 0px;
+  }
   &__body {
     display: flex;
   }
@@ -76,8 +79,18 @@
   &__post {
     display: flex;
     margin: 0 -2rem;
+    position: relative;
     &:not(:last-child) {
       margin-bottom: 7rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.1rem;
+      width: calc(100% - 10rem);
+      bottom: -3rem;
+      left: 2rem;
+      background-color: rgba($color_text_three, 0.2);
     }
   }
   &__post-img,
@@ -118,5 +131,51 @@
     background: url("../static/icon/icon.png") no-repeat;
     background-position: -77px center;
     background-size: auto 25px;
+  }
+}
+
+.aside {
+  flex: 0 1 33.333%;
+  padding: 0 0 0 5.8rem;
+
+  border-left: 1px solid rgba($color_text_base, 0.1);
+  &__title {
+    display: flex;
+    align-items: center;
+
+    color: $color_text_second;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+  }
+  &__icon {
+    margin: 0 2.8rem 0 1rem;
+    display: inline-block;
+    width: 4.4rem;
+    height: 4.4rem;
+    background: url("../static/icon/icon.png") no-repeat;
+  }
+  &__icon-annonce {
+    background-position: -9px -6px;
+  }
+  &__icon-popular {
+    background-position: -70px -6px;
+  }
+  &__link {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: $color_text_base;
+    position: relative;
+    padding: 0 0 0 0.8em;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0.8rem;
+      left: 0;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background-color: $color_link_second;
+    }
   }
 }
