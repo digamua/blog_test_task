@@ -6,96 +6,98 @@ block content_block
 	section.section
 		.section__wrap
 			.section__header
-				.section__nav.nav 
-					.nav__body
-						+listLink({
-						gl_class: 'nav-menu',
-						ul_title: 'tag: ',
-						items: [
-							{title: 'bitcoin', url: '#', active: false},
-							{title: 'bittorrent', url: '#', active: false},
-							{title: 'irc', url: '#', active: false},
-							{title: 'news', url: '#', active: false},
-							{title: 'privacy', url: '#', active: false},
-							{title: 'programming', url: '#', active: false},
-							{title: 'security', url: '#', active: false}
-						]
+				.section__nav.nav
+					.nav_body
+						.nav_menu
+							span.nav_menu__label tags:
+							+listLink({
+							gl_class: 'nav_menu',
+							items: [
+								{title: 'bitcoin'},
+								{title: 'bittorrent'},
+								{title: 'irc'},
+								{title: 'news'},
+								{title: 'privacy'},
+								{title: 'programming'},
+								{title: 'security'}
+							]
 						})
-						+listLink({
-						gl_class: 'nav-contact',
-						items:[
-							{title: 'team', url: '#', active: false},
-							{title: 'contact', url: '#', active: false}
-						]
-						})
+						.nav__contact
+							+listLink({
+							gl_class: 'nav_contact',
+							items:[
+								{title: 'team'},
+								{title: 'contact'}
+							]
+							})
 			.section__body
 				.section__article.article
 					h1.article__title Recent posts
 					.article__body
-							+itemPost({
-								items: [
-									{
-									description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
-									url: '1',
-									image: '/img/Bitmap-1.jpg',
-									image_alt: 'Alt Description',
-									author: 'Derek Zimmer',
-									date: 'JUL 25, 2018',
-									tag: 'Governments, Networking, Open Source, Privacy, Security',
-									value: '0'
-									},
-									{
-									description: 'How to get cheaper flights using a VPN',
-									url: '1',
-									image: '/img/Bitmap-2.jpg',
-									image_alt: 'Alt Description',
-									author: 'Jayson',
-									date: 'JUL 24, 2018',
-									tag: 'Guides',
-									value: '2'
-									},
-									{
-									description: 'Net Neutrality was repealed, but the fight is far from over',
-									url: '1',
-									image: '/img/Bitmap-3.jpg',
-									image_alt: 'Alt Description',
-									author: 'Chris Miller',
-									date: 'JUL 22, 2018',
-									tag: 'Governments, Net Neutrality, News',
-									value: '26'
-									},
-									{
-									description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
-									url: '1',
-									image: '/img/Bitmap-1.jpg',
-									image_alt: 'Alt Description',
-									author: 'Derek Zimmer',
-									date: 'JUL 25, 2018',
-									tag: 'Governments, Networking, Open Source, Privacy, Security',
-									value: '0'
-									},
-									{
-									description: 'How to get cheaper flights using a VPN',
-									url: '1',
-									image: '/img/Bitmap-2.jpg',
-									image_alt: 'Alt Description',
-									author: 'Jayson',
-									date: 'JUL 24, 2018',
-									tag: 'Guides',
-									value: '2'
-									},
-									{
-									description: 'Net Neutrality was repealed, but the fight is far from over',
-									url: '1',
-									image: '/img/Bitmap-3.jpg',
-									image_alt: 'Alt Description',
-									author: 'Chris Miller',
-									date: 'JUL 22, 2018',
-									tag: 'Governments, Net Neutrality, News',
-									value: '26'
-									}
-								]
-								})
+						+articlePost({
+							items: [
+								{
+								description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+								url: '1.html',
+								image: '/img/Bitmap-1.jpg',
+								image_alt: 'Alt Description',
+								author: 'Derek Zimmer',
+								date: 'JUL 25, 2018',
+								tag: 'Governments, Networking, Open Source, Privacy, Security',
+								value: '0'
+								},
+								{
+								description: 'How to get cheaper flights using a VPN',
+								url: '1',
+								image: '/img/Bitmap-2.jpg',
+								image_alt: 'Alt Description',
+								author: 'Jayson',
+								date: 'JUL 24, 2018',
+								tag: 'Guides',
+								value: '2'
+								},
+								{
+								description: 'Net Neutrality was repealed, but the fight is far from over',
+								url: '1',
+								image: '/img/Bitmap-3.jpg',
+								image_alt: 'Alt Description',
+								author: 'Chris Miller',
+								date: 'JUL 22, 2018',
+								tag: 'Governments, Net Neutrality, News',
+								value: '26'
+								},
+								{
+								description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+								url: '1',
+								image: '/img/Bitmap-1.jpg',
+								image_alt: 'Alt Description',
+								author: 'Derek Zimmer',
+								date: 'JUL 25, 2018',
+								tag: 'Governments, Networking, Open Source, Privacy, Security',
+								value: '0'
+								},
+								{
+								description: 'How to get cheaper flights using a VPN',
+								url: '1',
+								image: '/img/Bitmap-2.jpg',
+								image_alt: 'Alt Description',
+								author: 'Jayson',
+								date: 'JUL 24, 2018',
+								tag: 'Guides',
+								value: '2'
+								},
+								{
+								description: 'Net Neutrality was repealed, but the fight is far from over',
+								url: '1',
+								image: '/img/Bitmap-3.jpg',
+								image_alt: 'Alt Description',
+								author: 'Chris Miller',
+								date: 'JUL 22, 2018',
+								tag: 'Governments, Net Neutrality, News',
+								value: '26'
+								}
+							]
+							})
 					a.article_btn(href="#") older posts
 
 				aside.section__aside.aside
@@ -113,11 +115,11 @@ block content_block
 						+listLink({
 						gl_class: 'aside',
 						items: [
-							{title: 'Upcoming Changes (Live Chat, Less Censorship, More Access)', url: '#', active: false},
-							{title: 'New Servers (US Washington DC)', url: '#', active: false},
-							{title: 'New Servers (US Denver)', url: '#', active: false},
-							{title: 'Open Source: Releasing the PIA iOS Client', url: '#', active: false},
-							{title: 'Opera Extension is now available', url: '#', active: true}
+							{title: 'Upcoming Changes (Live Chat, Less Censorship, More Access)'},
+							{title: 'New Servers (US Washington DC)'},
+							{title: 'New Servers (US Denver)'},
+							{title: 'Open Source: Releasing the PIA iOS Client'},
+							{title: 'Opera Extension is now available'}
 						]
 						})
 					.aside__popular 
@@ -125,11 +127,11 @@ block content_block
 						+listLink({
 						gl_class: 'aside',
 						items: [
-							{title: 'The Gift of Privacy', url: '#', active: false},
-							{title: 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture', url: '#', active: false},
-							{title: 'About the PIA Client Security and VPN Security in General', url: '#', active: false},
-							{title: 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech', url: '#', active: false},
-							{title: 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lieet', url: '#', active: true}
+							{title: 'The Gift of Privacy'},
+							{title: 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture'},
+							{title: 'About the PIA Client Security and VPN Security in General'},
+							{title: 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech'},
+							{title: 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lieet'}
 						]
 						})
 					.aside__banner
@@ -140,28 +142,28 @@ block content_block
 						+listLink({
 						gl_class: 'aside-tag',
 						items: [
-							{title: 'Lorem', url: '#', active: false},
-							{title: 'ipsum', url: '#', active: false},
-							{title: 'dolor', url: '#', active: false},
-							{title: 'sit', url: '#', active: false},
-							{title: 'amet', url: '#', active: true},
-							{title: 'consectetur', url: '#', active: false},
-							{title: 'adipisicing', url: '#', active: false},
-							{title: 'elit', url: '#', active: false},
-							{title: 'Tempore', url: '#', active: false},
-							{title: 'officiis', url: '#', active: false},
-							{title: 'ipsam', url: '#', active: false},
-							{title: 'labore', url: '#', active: true},
-							{title: 'totam', url: '#', active: false},
-							{title: 'totam', url: '#', active: false},
-							{title: 'possimus', url: '#', active: false},
-							{title: 'necessitatibus', url: '#', active: true},
-							{title: 'Minima', url: '#', active: false},
-							{title: 'maiores', url: '#', active: false},
-							{title: 'elit', url: '#', active: false},
-							{title: 'architecto', url: '#', active: false},
-							{title: 'nam', url: '#', active: false},
-							{title: 'ipsam', url: '#', active: false},
-							{title: 'quaerat', url: '#', active: true},
+							{title: 'Lorem'},
+							{title: 'ipsum'},
+							{title: 'dolor'},
+							{title: 'sit'},
+							{title: 'amet', url: 'page1.html', active: true},
+							{title: 'consectetur'},
+							{title: 'adipisicing'},
+							{title: 'elit'},
+							{title: 'Tempore'},
+							{title: 'officiis'},
+							{title: 'ipsam'},
+							{title: 'labore', url: 'page2.html', active: true},
+							{title: 'totam'},
+							{title: 'totam'},
+							{title: 'possimus'},
+							{title: 'necessitatibus', url: 'page1.html', active: true},
+							{title: 'Minima'},
+							{title: 'maiores'},
+							{title: 'elit'},
+							{title: 'architecto'},
+							{title: 'nam'},
+							{title: 'ipsam'},
+							{title: 'quaerat', url: 'page2.html', active: true},
 						]
 						})
