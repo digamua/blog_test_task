@@ -1,0 +1,73 @@
+.section__article.article
+					h1.article__title Recent posts
+					.article__body
+						-
+							let arr = [
+							{
+							description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+							url: '1.html',
+							image: '/img/Bitmap-1.jpg',
+							image_alt: 'Alt Description',
+							author: 'Derek Zimmer',
+							date: 'JUL 25, 2018',
+							tag: 'Governments, Networking, Open Source, Privacy, Security',
+							value: '0'
+							},
+							{
+							description: 'How to get cheaper flights using a VPN',
+							url: '1',
+							image: '/img/Bitmap-2.jpg',
+							image_alt: 'Alt Description',
+							author: 'Jayson',
+							date: 'JUL 24, 2018',
+							tag: 'Guides',
+							value: '2'
+							},
+							{
+							description: 'Net Neutrality was repealed, but the fight is far from over',
+							url: '1',
+							image: '/img/Bitmap-3.jpg',
+							image_alt: 'Alt Description',
+							author: 'Chris Miller',
+							date: 'JUL 22, 2018',
+							tag: 'Governments, Net Neutrality, News',
+							value: '26'
+							},
+							{
+							description: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises',
+							url: '1',
+							image: '/img/Bitmap-1.jpg',
+							image_alt: 'Alt Description',
+							author: 'Derek Zimmer',
+							date: 'JUL 25, 2018',
+							tag: 'Governments, Networking, Open Source, Privacy, Security',
+							value: '0'
+							},
+							{
+							description: 'How to get cheaper flights using a VPN',
+							url: '1',
+							image: '/img/Bitmap-2.jpg',
+							image_alt: 'Alt Description',
+							author: 'Jayson',
+							date: 'JUL 24, 2018',
+							tag: 'Guides',
+							value: '2'
+							},
+							{
+							description: 'Net Neutrality was repealed, but the fight is far from over',
+							url: '1',
+							image: '/img/Bitmap-3.jpg',
+							image_alt: 'Alt Description',
+							author: 'Chris Miller',
+							date: 'JUL 22, 2018',
+							tag: 'Governments, Net Neutrality, News',
+							value: '26'
+							}
+							];
+						ul(class=`article__items`)
+							each item in arr
+								- url = item.url || '#'
+									li.article__post
+										+articlePost (item)
+					.article__footer
+						a.article_btn(href="#") older posts

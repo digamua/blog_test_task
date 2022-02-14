@@ -1,0 +1,58 @@
+.nav_body {
+  @include flex_block(row, nowrap, space-between, center, center);
+  padding: 2.3rem 3.2rem 2.3rem 3.2rem;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+
+  background: #f7f7f7;
+  border-radius: 0.4rem;
+}
+
+.nav_menu {
+  @include flex_block(row, wrap, flex-start, flex-start, flex-start);
+}
+
+.nav_menu__label {
+  margin: 0 5rem 0 0;
+}
+
+.nav_menu__item,
+.nav_contact__item {
+  padding: 0 3.5rem 0 0;
+  &:last-child {
+    padding: 0 0 0 0;
+  }
+}
+
+.nav_menu__link {
+  color: $color_link_second;
+}
+
+.nav_menu__list,
+.nav_contact__list {
+  @include flex_block(row, wrap, flex-start, center, center);
+}
+
+.nav_menu__list {
+  margin: 0 2rem 0 0;
+}
+
+@include bp($point_2, max) {
+  .nav_body {
+    flex-direction: column;
+
+    padding: 1.2rem 3.2rem 1.2rem 3.2rem;
+  }
+
+  .nav_menu__item,
+  .nav_contact__item {
+    padding: 0 2.4rem 1rem 0;
+    &:last-child {
+      padding: 0 0 1rem 0;
+    }
+  }
+}

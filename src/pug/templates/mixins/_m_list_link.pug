@@ -1,0 +1,7 @@
+mixin listLink(arr)
+	- gl_mod = arr.gl_mod || ''
+	ul(class=`${arr.gl_class}__list`)
+		each item in arr.items
+			- url = item.url || '#'
+			li(class= `${arr.gl_class}__item ${item.active ? `${arr.gl_class}__item--active` : ''} ${gl_mod ? `${arr.gl_class}__item--${gl_mod}` : ''}`)
+				a(href= url class= `${arr.gl_class}__link ${gl_mod ? `${arr.gl_class}__link--${gl_mod}` : ''}`)= item.title

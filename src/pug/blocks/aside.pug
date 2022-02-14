@@ -1,0 +1,75 @@
+aside.section__aside.aside
+					.aside__search
+						+form_input({
+							type: 'text',
+							placeholder: 'Search blog',
+							mod:'search',
+							class:'form_input__search',
+							name:'search'
+						})
+						label.form_input__icon
+							+icon('search', 'icon_20')
+					.aside__announce
+						.aside__header
+							+icon('bell', 'icon_60')
+							h3.aside__title Announcements
+						+listLink({
+						gl_class: 'aside',
+						items: [
+							{title: 'Upcoming Changes (Live Chat, Less Censorship, More Access)'},
+							{title: 'New Servers (US Washington DC)'},
+							{title: 'New Servers (US Denver)'},
+							{title: 'Open Source: Releasing the PIA iOS Client'},
+							{title: 'Opera Extension is now available'}
+						]
+						})
+					.aside__popular 
+						.aside__header
+							+icon('rss', 'icon_60')
+							h3.aside__title Popular posts
+						+listLink({
+						gl_class: 'aside',
+						items: [
+							{title: 'The Gift of Privacy'},
+							{title: 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture'},
+							{title: 'About the PIA Client Security and VPN Security in General'},
+							{title: 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech'},
+							{title: 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don`t Fall For That Lieet'}
+						]
+						})
+					.aside__banner
+						a.aside__banner_link(href="#")
+							+picture({
+								class: 'aside__banner_pic',
+								img: `banner`
+							})
+					.aside__tag 
+						h3.aside__title Tag cloud
+						+listLink({
+						gl_class: 'aside-tag',
+						items: [
+							{title: 'Lorem'},
+							{title: 'ipsum'},
+							{title: 'dolor'},
+							{title: 'sit'},
+							{title: 'amet', url: 'page1.html', active: true},
+							{title: 'consectetur'},
+							{title: 'adipisicing'},
+							{title: 'elit'},
+							{title: 'Tempore'},
+							{title: 'officiis'},
+							{title: 'ipsam'},
+							{title: 'labore', url: 'page2.html', active: true},
+							{title: 'totam'},
+							{title: 'totam'},
+							{title: 'possimus'},
+							{title: 'necessitatibus', url: 'page1.html', active: true},
+							{title: 'Minima'},
+							{title: 'maiores'},
+							{title: 'elit'},
+							{title: 'architecto'},
+							{title: 'nam'},
+							{title: 'ipsam'},
+							{title: 'quaerat', url: 'page2.html', active: true},
+						]
+						})

@@ -1,0 +1,24 @@
+.section__nav.nav
+					.nav_body
+						.nav_menu
+							span.nav_menu__label tags:
+							+listLink({
+							gl_class: 'nav_menu',
+							items: [
+								{title: 'bitcoin'},
+								{title: 'bittorrent'},
+								{title: 'irc'},
+								{title: 'news'},
+								{title: 'privacy'},
+								{title: 'programming'},
+								{title: 'security'}
+							]
+						})
+						.nav__contact
+							+listLink({
+							gl_class: 'nav_contact',
+							items:[
+								{title: 'team'},
+								{title: 'contact'}
+							]
+							})

@@ -1,0 +1,162 @@
+.aside {
+  width: 33.333%;
+  padding: 0 0 0 5.8rem;
+
+  border-left: 1px solid rgba($color_text_base, 0.1);
+}
+
+.aside__header {
+  @include flex_block(row, nowrap, flex-start, center, center);
+  margin: 0 0 2rem 0;
+}
+
+.aside__title {
+  @include flex_block(row, nowrap, flex-start, center, center);
+
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 3.4rem;
+
+  color: $color_text_second;
+}
+
+.icon_60 {
+  width: 60px;
+  height: 60px;
+}
+
+.icon_bell,
+.icon_rss {
+  margin: 0 1.8rem 0 0;
+}
+
+.aside__item {
+  position: relative;
+  padding: 0 0 0 0.8em;
+
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+
+  color: $color_text_base;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    width: 0.4rem;
+    height: 0.4rem;
+
+    background-color: $color_link_second;
+    border-radius: 50%;
+  }
+  &:not(:last-child) {
+    padding: 0 0 1.4rem 0.8rem;
+  }
+}
+
+.aside__announce,
+.aside__popular,
+.aside__banner {
+  margin: 0 0 7rem 0;
+}
+
+.aside__banner_link {
+  display: block;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.aside__announce,
+.aside__popular {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3.6rem;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+
+    background-color: rgba($color_text_base, 0.1);
+  }
+}
+.aside-tag__list {
+  @extend %global_flex_block_row_wrap_space_between_center;
+  padding: 0 3rem 0 0;
+}
+.aside__banner {
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.aside-tag__item {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  &:not(:last-child) {
+    margin: 0 1.5rem 0 0;
+  }
+}
+.aside-tag__item--active {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.aside__search {
+  margin: 0 0 4rem 0;
+}
+
+@include bp($point_2, max) {
+  .aside {
+    @include flex_block(row, wrap, space-between, stretch, center);
+    order: 1;
+    width: 100%;
+    padding: 0;
+
+    border: none;
+  }
+
+  .aside__search {
+    width: 100%;
+  }
+
+  .aside__announce,
+  .aside__popular {
+    width: 50%;
+  }
+
+  .aside__tag {
+    width: 66%;
+  }
+
+  .aside__banner {
+    width: 33%;
+    order: 3;
+    margin: 0 0 5rem 0;
+  }
+}
+
+@include bp($point_4, max) {
+  .aside__announce,
+  .aside__popular,
+  .aside__banner,
+  .aside__tag {
+    width: 100%;
+  }
+
+  .aside__tag {
+    margin: 0 0 7rem 0;
+  }
+
+  .aside-tag__list {
+    padding: 0;
+  }
+
+  .aside__banner {
+    img {
+      margin: 0 auto;
+    }
+  }
+}

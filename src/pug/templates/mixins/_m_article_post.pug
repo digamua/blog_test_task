@@ -1,16 +1,12 @@
 mixin articlePost(arr)
-	ul(class=`article__items`)
-		each item in arr.items
-			- url = item.url || '#'
-				li.article__post
-					.article__post__img
-						a(href= url class= ``)
-							img(src=item.image, alt=item.image_alt)
-					.article__post__content
-						.article__post__desc 
-							a(href= url)= item.description
-						.article__post__info
-							span.article__post__author= item.author
-							span.article__post__date= item.date
-						.article__post__tag= item.tag
-						.article__post__comment= item.value
+	.article__post__img
+		a(href= url class= ``)
+			img(src=arr.image, alt=arr.image_alt)
+	.article__post__content
+		.article__post__desc 
+			a(href= url)= arr.description
+		.article__post__info
+			span.article__post__author= arr.author
+			span.article__post__date= arr.date
+		.article__post__tag= arr.tag
+		.article__post__comment= arr.value
